@@ -3,79 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>El Puestito</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f5f5;
-    color: #333;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
 }
 
-header {
-    background: #1f6f43;
-    color: white;
-    padding: 30px;
-    text-align: center;
+body{
+background:#f4f4f4;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 40px;
+header{
+background:linear-gradient(90deg,#0d6efd,#16a34a);
+color:white;
+padding:20px;
+text-align:center;
 }
 
-header p {
-    font-size: 18px;
+header h1{
+font-size:35px;
 }
 
-section {
-    padding: 25px;
+header p{
+margin-top:8px;
+font-size:18px;
 }
 
-h2 {
-    color: #1f6f43;
+.oferta{
+background:#ff6b00;
+color:white;
+margin:15px;
+padding:18px;
+border-radius:15px;
+text-align:center;
+font-weight:bold;
 }
 
-.productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+.buscador{
+padding:15px;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+.buscador input{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:none;
+font-size:17px;
 }
 
-.card h3 {
-    margin-top: 0;
+.categorias{
+display:flex;
+overflow:auto;
+gap:10px;
+padding:15px;
 }
 
-.precio {
-    font-weight: bold;
-    color: #1f6f43;
+.categoria{
+background:white;
+padding:12px 20px;
+border-radius:25px;
+font-weight:bold;
+box-shadow:0 2px 5px rgba(0,0,0,.15);
+white-space:nowrap;
 }
 
-.boton {
-    display: inline-block;
-    background: #25D366;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+.productos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:15px;
+padding:15px;
 }
 
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
+.card{
+background:white;
+border-radius:15px;
+padding:15px;
+text-align:center;
+box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
+
+.card img{
+width:100%;
+border-radius:12px;
+}
+
+.precio{
+font-size:25px;
+color:#16a34a;
+font-weight:bold;
+margin:10px 0;
+}
+
+.whatsapp{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:10px 15px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+margin-top:20px;
+background:#0d6efd;
+color:white;
+padding:20px;
+text-align:center;
+}
+
 </style>
 
 </head>
@@ -83,97 +124,101 @@ footer {
 <body>
 
 <header>
-<h1>El Puestito</h1>
-<p>Limpieza, higiene y productos para tu negocio</p>
-<p>Venta minorista y mayorista</p>
+
+<h1>🛒 El Puestito</h1>
+
+<p>Todo para tu hogar al mejor precio</p>
+
 </header>
 
+<div class="oferta">
 
-<section>
+🔥 OFERTAS DE LA SEMANA 🔥
 
-<h2>Nuestros productos</h2>
+<br><br>
 
-<div class="productos">
+🧻 Higenol Plus
 
+<br>
 
-<div class="card">
-<h3>Higenol hoja simple</h3>
-<p>Papel higiénico de calidad.</p>
-<p class="precio">$1000</p>
+🍋 Magistral Ultra
+
+<br>
+
+🪥 Colgate Triple Acción
+
 </div>
 
+<div class="buscador">
 
-<div class="card">
-<h3>Higenol doble hoja</h3>
-<p>Mayor comodidad y duración.</p>
-<p class="precio">$1700</p>
+<input type="text" placeholder="Buscar productos...">
+
 </div>
 
+<div class="categorias">
 
-<div class="card">
-<h3>Detergente Magistral</h3>
-<p>Limpieza profunda.</p>
-<p class="precio">$2400</p>
+<div class="categoria">🧴 Limpieza</div>
+
+<div class="categoria">🧻 Papeles</div>
+
+<div class="categoria">🪥 Higiene</div>
+
+<div class="categoria">🥫 Alimentos</div>
+
 </div>
 
+<section class="productos">
 
 <div class="card">
-<h3>Detergente CIF</h3>
-<p>Ideal para cocina.</p>
-<p class="precio">$1900</p>
-</div>
 
+<h3>Colgate Triple Acción</h3>
 
-<div class="card">
-<h3>Rollos de cocina Duplex</h3>
-<p>Gran absorción.</p>
-<p class="precio">$1000</p>
-</div>
-
-
-<div class="card">
-<h3>Toallitas húmedas</h3>
-<p>Pack de 100 unidades.</p>
 <p class="precio">$3000</p>
-</div>
 
+<a class="whatsapp" href="https://wa.me/541126162963">
 
-<div class="card">
-<h3>Jabón Dove</h3>
-<p>Higiene personal.</p>
-<p class="precio">$1100</p>
-</div>
+Comprar
 
-
-<div class="card">
-<h3>Colgate triple acción</h3>
-<p>180 gramos.</p>
-<p class="precio">$3000</p>
-</div>
-
-
-</div>
-
-</section>
-
-
-<section style="text-align:center">
-
-<h2>¿Querés hacer un pedido?</h2>
-
-<p>Escribinos por WhatsApp y consultá disponibilidad y precios mayoristas.</p>
-
-<a class="boton" href="https://wa.me/5490000000000">
-WhatsApp
 </a>
 
+</div>
+
+<div class="card">
+
+<h3>Magistral Ultra</h3>
+
+<p class="precio">$2400</p>
+
+<a class="whatsapp" href="https://wa.me/541126162963">
+
+Comprar
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Higenol Plus</h3>
+
+<p class="precio">$1700</p>
+
+<a class="whatsapp" href="https://wa.me/541126162963">
+
+Comprar
+
+</a>
+
+</div>
+
 </section>
 
-
 <footer>
-<p>© 2026 El Puestito - Todos los derechos reservados</p>
+
+📱 WhatsApp: 11 2616-2963
+
 </footer>
 
-
 </body>
+
 </html>
