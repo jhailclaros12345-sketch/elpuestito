@@ -1,93 +1,224 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Tienda Skater & Punk</title>
-    <!-- Iconos de FontAwesome para que queden lindos los botones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Puestito</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+background:linear-gradient(90deg,#0d6efd,#16a34a);
+color:white;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+font-size:35px;
+}
+
+header p{
+margin-top:8px;
+font-size:18px;
+}
+
+.oferta{
+background:#ff6b00;
+color:white;
+margin:15px;
+padding:18px;
+border-radius:15px;
+text-align:center;
+font-weight:bold;
+}
+
+.buscador{
+padding:15px;
+}
+
+.buscador input{
+width:100%;
+padding:12px;
+border-radius:10px;
+border:none;
+font-size:17px;
+}
+
+.categorias{
+display:flex;
+overflow:auto;
+gap:10px;
+padding:15px;
+}
+
+.categoria{
+background:white;
+padding:12px 20px;
+border-radius:25px;
+font-weight:bold;
+box-shadow:0 2px 5px rgba(0,0,0,.15);
+white-space:nowrap;
+}
+
+.productos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:15px;
+padding:15px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+padding:15px;
+text-align:center;
+box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.card img{
+width:100%;
+border-radius:12px;
+}
+
+.precio{
+font-size:25px;
+color:#16a34a;
+font-weight:bold;
+margin:10px 0;
+}
+
+.whatsapp{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:10px 15px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+margin-top:20px;
+background:#0d6efd;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <!-- Encabezado / Logo y Buscador -->
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <!-- Podés cambiar "images/logo.png" por tu logo real más adelante -->
-                <img src="images/logo.png" alt="Logo de la Tienda" onerror="this.src='https://via.placeholder.com/150x50?text=TU+LOGO'">
-            </div>
-            
-            <div class="search-box">
-                <input type="text" id="search-input" placeholder="Buscar buzos, remeras, accesorios...">
-                <button id="search-btn"><i class="fas fa-search"></i></button>
-            </div>
-        </div>
-    </header>
+<header>
 
-    <!-- Carrusel de Ofertas / Banner Principal -->
-    <section class="banner-carousel">
-        <div class="carousel-item">
-            <h2>🔥 10% OFF EN TU PRIMERA COMPRA 🔥</h2>
-            <p>Llevate lo mejor de la onda urbana, Oversize y Punk</p>
-        </div>
-    </section>
+<h1>🛒 El Puestito</h1>
 
-    <!-- Filtros por Categorías -->
-    <section class="categories-section">
-        <h3>Categorías</h3>
-        <div class="categories-container">
-            <button class="category-btn active" data-category="todos">Todo</button>
-            <button class="category-btn" data-category="remeras">Remeras Oversize</button>
-            <button class="category-btn" data-category="buzos">Buzos / Hoodies</button>
-            <button class="category-btn" data-category="accesorios">Accesorios & Punk</button>
-        </div>
-    </section>
+<p>Todo para tu hogar al mejor precio</p>
 
-    <!-- Sección de Productos Destacados -->
-    <main class="products-section">
-        <h3>Productos Destacados</h3>
-        <div class="products-grid" id="products-grid">
-            
-            <!-- Producto 1: Remera Oversize -->
-            <div class="product-card" data-category="remeras">
-                <img src="images/remera-oversize.jpg" alt="Remera Skate Oversize" onerror="this.src='https://via.placeholder.com/250?text=Remera+Oversize'">
-                <div class="product-info">
-                    <h4>Remera Oversize Skate Negra</h4>
-                    <p class="price">$18.500</p>
-                    <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Agregar al pedido</button>
-                </div>
-            </div>
+</header>
 
-            <!-- Producto 2: Buzo Stray Kids -->
-            <div class="product-card" data-category="buzos">
-                <img src="images/buzo-skz.jpg" alt="Buzo Hoodie Stray Kids" onerror="this.src='https://via.placeholder.com/250?text=Buzo+Stray+Kids'">
-                <div class="product-info">
-                    <h4>Buzo Hoodie - Stray Kids Rock</h4>
-                    <p class="price">$28.000</p>
-                    <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Agregar al pedido</button>
-                </div>
-            </div>
+<div class="oferta">
 
-            <!-- Producto 3: Choker/Accesorio Punk Nana -->
-            <div class="product-card" data-category="accesorios">
-                <img src="images/choker-nana.jpg" alt="Choker Punk Estilo Nana" onerror="this.src='https://via.placeholder.com/250?text=Choker+Punk+Nana'">
-                <div class="product-info">
-                    <h4>Choker de Cuero con Tachas (Estilo Nana)</h4>
-                    <p class="price">$7.500</p>
-                    <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Agregar al pedido</button>
-                </div>
-            </div>
+🔥 OFERTAS DE LA SEMANA 🔥
 
-        </div>
-    </main>
+<br><br>
 
-    <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/54911XXXXXXXX" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+🧻 Higenol Plus
 
-    <!-- Vinculamos el archivo JS para que después funcione todo -->
-    <script src="script.js"></script>
+<br>
+
+🍋 Magistral Ultra
+
+<br>
+
+🪥 Colgate Triple Acción
+
+</div>
+
+<div class="buscador">
+
+<input type="text" placeholder="Buscar productos...">
+
+</div>
+
+<div class="categorias">
+
+<div class="categoria">🧴 Limpieza</div>
+
+<div class="categoria">🧻 Papeles</div>
+
+<div class="categoria">🪥 Higiene</div>
+
+<div class="categoria">🥫 Alimentos</div>
+
+</div>
+
+<section class="productos">
+
+<div class="card">
+
+<h3>Colgate Triple Acción</h3>
+
+<p class="precio">$3000</p>
+
+<a class="whatsapp" href="https://wa.me/541126162963">
+
+Comprar
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Magistral Ultra</h3>
+
+<p class="precio">$2400</p>
+
+<a class="whatsapp" href="https://wa.me/541126162963">
+
+Comprar
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Higenol Plus</h3>
+
+<p class="precio">$1700</p>
+
+<a class="whatsapp" href="https://wa.me/541126162963">
+
+Comprar
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+📱 WhatsApp: 11 2616-2963
+
+</footer>
+
 </body>
+
 </html>
