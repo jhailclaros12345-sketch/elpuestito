@@ -1,114 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>El Puestito</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Puestito</title>
 
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-
-<h1>🛒 El Puestito</h1>
-
-<p>Todo para tu hogar al mejor precio</p>
-
+    <h1>🏪 El Puestito</h1>
+    <p>Mayorista y Minorista</p>
 </header>
 
-<div class="oferta">
+<section class="buscador">
+    <input
+        type="text"
+        id="buscador"
+        placeholder="🔍 Buscar productos...">
+</section>
 
-🔥 OFERTAS DE LA SEMANA 🔥
+<section class="categorias">
+    <div class="categoria">Todos</div>
+    <div class="categoria">Limpieza</div>
+    <div class="categoria">Higiene</div>
+    <div class="categoria">Papeles</div>
+    <div class="categoria">Almacén</div>
+    <div class="categoria">Bebidas</div>
+</section>
 
-<br><br>
+<section>
+    <h2>Nuestros productos</h2>
 
-🧻 Higenol Plus
-
-<br>
-
-🍋 Magistral Ultra
-
-<br>
-
-🪥 Colgate Triple Acción
-
-</div>
-
-<div class="buscador">
-
-<input type="text" placeholder="Buscar productos...">
-
-</div>
-
-<div class="categorias">
-
-<div class="categoria">🧴 Limpieza</div>
-
-<div class="categoria">🧻 Papeles</div>
-
-<div class="categoria">🪥 Higiene</div>
-
-<div class="categoria">🥫 Alimentos</div>
-
-</div>
-
-<section class="productos">
-
-<div class="card">
-
-<h3>Colgate Triple Acción</h3>
-
-<p class="precio">$3000</p>
-
-<a class="whatsapp" href="https://wa.me/541126162963">
-
-Comprar
-
-</a>
-
-</div>
-
-<div class="card">
-
-<h3>Magistral Ultra</h3>
-
-<p class="precio">$2400</p>
-
-<a class="whatsapp" href="https://wa.me/541126162963">
-
-Comprar
-
-</a>
-
-</div>
-
-<div class="card">
-
-<h3>Higenol Plus</h3>
-
-<p class="precio">$1700</p>
-
-<a class="whatsapp" href="https://wa.me/541126162963">
-
-Comprar
-
-</a>
-
-</div>
-
+    <div id="contenedor-productos" class="productos">
+        <!-- Los productos aparecerán automáticamente -->
+    </div>
 </section>
 
 <footer>
-
-📱 WhatsApp: 11 2616-2963
-
+    <p>© 2026 El Puestito - Todos los derechos reservados</p>
 </footer>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
