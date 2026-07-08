@@ -155,9 +155,9 @@ const productos = [
         imagen: "images/esencial-limon.png"
     },
     {
-        nombre: "Jabón de Tocador Plusbelle Frescura 120g",
+        nombre: "Jabón de Tocador Plusbelle Frescura 90g",
         precio: 1000,
-        imagen: "images/jabde-toc-plusbelle-frescura-vft-120gr.jpg"
+        imagen: "images/jabon-de-toc-plusbelle-frescura.jpg"
     }
 ];
 
