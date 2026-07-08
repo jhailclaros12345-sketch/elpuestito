@@ -56,102 +56,102 @@ const productos = [
     },
     {
         nombre: "Pitusas Black",
-        precio: 1200,
+        precio: 1000,
         imagen: "images/Pitusas-black.webp"
     },
     {
         nombre: "Alcohol Duplex",
-        precio: 1500,
+        precio: 2000,
         imagen: "images/Alcohol-duplex.jpeg"
     },
     {
         nombre: "Arroz Molto Largo Fino",
-        precio: 1800,
+        precio: 1300,
         imagen: "images/Arroz-molto-largo-fino.jpg"
     },
     {
         nombre: "Cif 500 ml",
-        precio: 2800,
+        precio: 2500,
         imagen: "images/Cif-500-ml.jpeg"
     },
     {
         nombre: "Dove Invisible Care",
-        precio: 3500,
+        precio: 4000,
         imagen: "images/Dave-invisible-care.webp"
     },
     {
         nombre: "Esponjas Virulana",
-        precio: 900,
+        precio: 1000,
         imagen: "images/Espojas-virulana.jpg"
     },
     {
         nombre: "Jabón en Polvo 800g",
-        precio: 3200,
+        precio: 2800,
         imagen: "images/Jabon-en-polvo-800g.webp"
     },
     {
         nombre: "Jabón Qué Linda",
-        precio: 1100,
+        precio: 1500,
         imagen: "images/Jabon-que-linda.webp"
     },
     {
         nombre: "Mini Coronitas",
-        precio: 1300,
+        precio: 1000,
         imagen: "images/Mini-coronitas-.webp"
     },
     {
         nombre: "Mini Pitusas Frutilla",
-        precio: 1200,
+        precio: 1000,
         imagen: "images/Mini-pitusas-frutilla.webp"
     },
     {
         nombre: "Nocsol Dulces Pack de 3",
-        precio: 2000,
+        precio: 1500,
         imagen: "images/Noosol-dulces-pack-do-3.jpeg"
     },
     {
         nombre: "Nocturna Suave 16",
-        precio: 2400,
+        precio: 4500,
         imagen: "images/Nocturna-suave-16.jpg"
     },
     {
         nombre: "Plusbelle Frescura",
-        precio: 1700,
+        precio: 1000,
         imagen: "images/Plusbelle-frescura.jpg"
     },
     {
         nombre: "Rexona Antibac Dama",
-        precio: 2600,
+        precio: 3000,
         imagen: "images/Reaxona-antibac-dama.webp"
     },
     {
         nombre: "Rexona Control Inteligente",
-        precio: 2600,
+        precio: 3000,
         imagen: "images/Reaxona-control-inteligente.webp"
     },
     {
         nombre: "Surtido Bagley",
-        precio: 2200,
+        precio: 2500,
         imagen: "images/Surtido-bagley.jpeg"
     },
     {
         nombre: "Virulana",
-        precio: 800,
+        precio: 1000,
         imagen: "images/Virulana.webp"
     },
     {
         nombre: "Yerba Canarias 1kg",
-        precio: 4500,
+        precio: 12000,
         imagen: "images/Yerba-canarias-1kg.jpg"
     },
     {
         nombre: "Yerba Mañanita 500ml",
-        precio: 2100,
+        precio: 1800,
         imagen: "images/Yerba-mañanita-500ml.jpg"
     },
     {
         nombre: "Esencial Limón",
-        precio: 1600,
+        precio: 1000,
         imagen: "images/esencial-limon.png"
     },
     {
