@@ -1,75 +1,135 @@
-// --- TU LISTA DE PRODUCTOS CON SUS IMÁGENES REALES ---
-const productos = [
-  { 
-    nombre: "Magistral Ultra", 
-    precio: 2400, 
-    categoria: "limpieza",
-    imagen: "magistral-ultra.jpg" // Nombre exacto de tu archivo
-  },
-  { 
-    nombre: "Colgate Triple Acción", 
-    precio: 3000, 
-    categoria: "higiene",
-    imagen: "colgate-triple-accion.jpg" 
-  },
-  { 
-    nombre: "Axe Desodorante Apolo", 
-    precio: 2100, 
-    categoria: "higiene",
-    imagen: "axe-desodorante-apolo.jpg" 
-  },
-  { 
-    nombre: "Axe Desodorante Black", 
-    precio: 2100, 
-    categoria: "higiene",
-    imagen: "axe-desodorante-black.jpg" 
-  },
-  { 
-    nombre: "Dove Original", 
-    precio: 2500, 
-    categoria: "higiene",
-    imagen: "dove-original.jpg" 
-  },
-  { 
-    nombre: "Tostada Manieri 200g", 
-    precio: 1200, 
-    categoria: "almacen",
-    imagen: "tostada-manieri-200gr-mesa.jpg" 
-  },
-  { 
-    nombre: "Café La Morenita Saquitos", 
-    precio: 1800, 
-    categoria: "almacen",
-    imagen: "morenita-saquitos-400×400.jpg" 
-  }
-];
-
-// --- LÓGICA PARA DIBUJAR LAS TARJETAS ---
-const contenedor = document.getElementById('contenedor-productos');
-
-function cargarProductos() {
-  if (!contenedor) return;
-  contenedor.innerHTML = "";
-
-  productos.forEach(producto => {
-    const card = document.createElement('div');
-    card.className = 'card';
-
-    // Mensaje automático para tu WhatsApp
-    const mensajeWhatsapp = encodeURIComponent(`Hola El Puestito, quiero comprar: ${producto.nombre} - $${producto.precio}`);
-
-    // Modificamos el diseño para agregar la etiqueta de imagen <img> arriba del título
-    card.innerHTML = `
-      <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-img" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;">
-      <h3>${producto.nombre}</h3>
-      <p class="precio">$${producto.precio}</p>
-      <a class="whatsapp" href="https://wa.me/541126162963?text=${mensajeWhatsapp}" target="_blank">
-        Comprar
-      </a>
-    `;
-
-    contenedor.appendChild(card);
-  });
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-document.addEventListener('DOMContentLoaded', cargarProductos);
+body{
+    background:#f5f5f5;
+    color:#333;
+}
+
+header{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+}
+
+.buscador{
+    padding:20px;
+}
+
+.buscador input{
+    width:100%;
+    padding:14px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.categorias{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding:0 20px 20px;
+}
+
+.categoria{
+    background:white;
+    padding:10px 18px;
+    border-radius:20px;
+    font-weight:bold;
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+    white-space:nowrap;
+}
+.productos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:contain;
+    background:#fff;
+    padding:10px;
+}
+
+.card h3{
+    padding:10px;
+    font-size:18px;
+}
+
+.precio{
+    color:#0d6efd;
+    font-size:24px;
+    font-weight:bold;
+    padding:0 10px 10px;
+}
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+h2{
+    text-align:center;
+    margin-top:20px;
+    font-size:28px;
+}
+
+@media (max-width:768px){
+
+    header h1{
+        font-size:28px;
+    }
+
+    .productos{
+        grid-template-columns:1fr;
+    }
+
+    .card img{
+        height:180px;
+    }
+
+}
+
+.whatsapp{
+    display:block;
+    margin:10px;
+    text-align:center;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    border-radius:10px;
+    font-weight:bold;
+}
