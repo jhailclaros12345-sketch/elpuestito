@@ -107,7 +107,7 @@ const productos = [
     {
         nombre: "Neosol Dulces Pack de 3",
         precio: 1500,
-        imagen: "images/Neosol-dulces-pack-do-3.jpeg"
+        imagen: "images/Neosol-dulces-pack-de-3.jpeg"
     },
     {
         nombre: "Nocturna Suave 16",
