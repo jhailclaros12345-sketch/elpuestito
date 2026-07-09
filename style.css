@@ -133,3 +133,9 @@ h2{
     border-radius:10px;
     font-weight:bold;
 }
+.sin-stock {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 8px 0;
+}
