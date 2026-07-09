@@ -105,9 +105,9 @@ const productos = [
         imagen: "images/Mini-pitusas-frutilla.webp"
     },
     {
-        nombre: "Nocsol Dulces Pack de 3",
+        nombre: "Neosol Dulces Pack de 3",
         precio: 1500,
-        imagen: "images/Noosol-dulces-pack-do-3.jpeg"
+        imagen: "images/Neosol-dulces-pack-do-3.jpeg"
     },
     {
         nombre: "Nocturna Suave 16",
