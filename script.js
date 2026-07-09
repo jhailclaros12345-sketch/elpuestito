@@ -77,7 +77,7 @@ const productos = [
     {
         nombre: "Dove Invisible Care",
         precio: 4000,
-        imagen: "images/Dave-invisible-care.webp"
+        imagen: "images/Dave-invicible-care.webp"
     },
     {
         nombre: "Esponjas Virulana",
