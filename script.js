@@ -286,32 +286,3 @@ function filtrarCategoria(categoria) {
 
     mostrarProductos(productosFiltrados);
 }
-let carrito = [];
-
-
-function verCarrito() {
-    if (carrito.length === 0) {
-        alert("Tu carrito está vacío.");
-        return;
-    }
-
-    let mensaje = "🛒 Tu carrito:\n\n";
-    let total = 0;
-
-    carrito.forEach(producto => {
-        mensaje += `• ${producto.nombre} - $${producto.precio}\n`;
-        total += producto.precio;
-    });
-
-    mensaje += `\n💰 Total: $${total}`;
-
-    alert(mensaje);
-}
-function abrirCarrito() {
-    document.getElementById("panel-carrito").classList.add("abierto");
-}
-
-function cerrarCarrito() {
-    document.getElementById("panel-carrito").classList.remove("abierto");
-}
-
