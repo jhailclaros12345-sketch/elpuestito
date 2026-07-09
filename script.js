@@ -47,7 +47,7 @@ const productos = [
     {
         nombre: "Morenita Saquitos",
         precio: 4000,
-        imagen: "images/morenita-saquitos.jpg"
+        imagen: "images/Caffe-morenita-saquitos.jpg"
     },
     {
         nombre: "Rexona Odorono 60g",
