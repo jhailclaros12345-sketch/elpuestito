@@ -295,5 +295,8 @@ function agregarAlCarrito(nombre, precio) {
 
     document.getElementById("contador-carrito").textContent = carrito.length;
 }
-
+...
+<script src="script.js"></script>
+</body>
+</html>
     
