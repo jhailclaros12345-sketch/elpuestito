@@ -246,9 +246,13 @@ function mostrarProductos(lista) {
                 <h2>${producto.nombre}</h2>
                 <p class="precio">$${producto.precio}</p>
                 <a class="whatsapp" href="https://wa.me/5491126162963?text=Hola,%20quiero%20comprar%20${encodeURIComponent(producto.nombre)}">Pedir por WhatsApp</a>
-<button class="carrito" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">
-    🛒 Agregar al carrito
-</button>
+let carrito = [];
+
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
+
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
             </div>
         `;
     });
