@@ -310,6 +310,23 @@ function agregarAlCarrito(nombre, precio) {
 
     actualizarCarrito();
 }
+function cambiarCantidad(indice, cambio) {
+
+    carrito[indice].cantidad += cambio;
+
+    if (carrito[indice].cantidad <= 0) {
+        carrito.splice(indice, 1);
+    }
+
+    actualizarCarrito();
+}
+
+function eliminarProducto(indice) {
+
+    carrito.splice(indice, 1);
+
+    actualizarCarrito();
+}
 function actualizarCarrito() {
 
     const contenido = document.getElementById("contenido-carrito");
