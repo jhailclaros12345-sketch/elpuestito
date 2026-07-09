@@ -93,7 +93,7 @@ header p{
 .categorias button:active{
     transform:scale(0.95);
 }
-}
+
 .productos{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
