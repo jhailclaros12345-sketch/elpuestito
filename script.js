@@ -286,3 +286,10 @@ function filtrarCategoria(categoria) {
 
     mostrarProductos(productosFiltrados);
 }
+let carrito = [];
+
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
+
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
