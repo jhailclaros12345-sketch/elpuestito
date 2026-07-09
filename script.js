@@ -79,7 +79,7 @@ stock: true
     {
         nombre: "Pitusas Black",
         precio: 1000,
-        imagen: "images/ Pitusas-black.webp",
+        imagen: "images/Pitusas-black.webp",
 categoria: "almacen",
 stock: true
     },
