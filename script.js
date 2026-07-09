@@ -180,7 +180,7 @@ function mostrarProductos(lista) {
                 <img src="${producto.imagen}" alt="${producto.nombre}">
                 <h2>${producto.nombre}</h2>
                 <p class="precio">$${producto.precio}</p>
-                <a class="whatsapp" href="https://wa.me/541125162963?text=Hola,%20quiero%20comprar%20${encodeURIComponent(producto.nombre)}">Pedir por WhatsApp</a>
+                <a class="whatsapp" href="https://wa.me/5491126162963)?text=Hola,%20quiero%20comprar%20${encodeURIComponent(producto.nombre)}">Pedir por WhatsApp</a>
             </div>
         `;
     });
