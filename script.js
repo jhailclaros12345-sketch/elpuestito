@@ -310,3 +310,63 @@ function agregarAlCarrito(nombre, precio) {
 
     actualizarCarrito();
 }
+function actualizarCarrito() {
+
+    const contenido = document.getElementById("contenido-carrito");
+    const contador = document.getElementById("contador-carrito");
+
+    contador.textContent = carrito.reduce(
+        (total, producto) => total + producto.cantidad,
+        0
+    );
+
+    if (carrito.length === 0) {
+        contenido.innerHTML = "<p>Tu carrito está vacío.</p>";
+        return;
+    }
+
+    let html = "";
+    let total = 0;
+
+    carrito.forEach((producto, indice) => {
+
+        const subtotal = producto.precio * producto.cantidad;
+        total += subtotal;
+
+        html += `
+            <div class="item-carrito">
+                <h3>${producto.nombre}</h3>
+
+                <p>$${producto.precio}</p>
+
+                <div class="controles">
+
+                    <button onclick="cambiarCantidad(${indice}, -1)">➖</button>
+
+                    <span>${producto.cantidad}</span>
+
+                    <button onclick="cambiarCantidad(${indice}, 1)">➕</button>
+
+                    <button onclick="eliminarProducto(${indice})">🗑</button>
+
+                </div>
+            </div>
+        `;
+    });
+
+    html += `
+        <hr>
+
+        <h3>Total: $${total}</h3>
+
+        <button class="carrito-btn" onclick="finalizarCompra()">
+            📲 Finalizar compra
+        </button>
+
+        <button class="carrito-btn" onclick="vaciarCarrito()">
+            🗑 Vaciar carrito
+        </button>
+    `;
+
+    contenido.innerHTML = html;
+}
