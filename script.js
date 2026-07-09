@@ -283,3 +283,12 @@ function filtrarCategoria(categoria) {
 
     mostrarProductos(productosFiltrados);
 }
+let carrito = [];
+
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
+
+    alert(
+        `${nombre} agregado al carrito.\n\nProductos: ${carrito.length}`
+    );
+}
