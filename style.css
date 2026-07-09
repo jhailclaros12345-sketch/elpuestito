@@ -71,13 +71,28 @@ header p{
 }
 }
 
-.categoria{
-    background:white;
-    padding:10px 18px;
-    border-radius:20px;
+.categorias button{
+    background:#ffffff;
+    border:none;
+    border-radius:25px;
+    padding:12px 22px;
+    font-size:16px;
     font-weight:bold;
-    box-shadow:0 2px 6px rgba(0,0,0,.15);
+    cursor:pointer;
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+    transition:all .3s ease;
     white-space:nowrap;
+}
+
+.categorias button:hover{
+    background:#1976d2;
+    color:white;
+    transform:translateY(-2px);
+}
+
+.categorias button:active{
+    transform:scale(0.95);
+}
 }
 .productos{
     display:grid;
