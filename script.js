@@ -317,3 +317,10 @@ function abrirCarrito() {
 function cerrarCarrito() {
     document.getElementById("panel-carrito").classList.remove("abierto");
 }
+let carrito = [];
+
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
+
+    document.getElementById("contador-carrito").textContent = carrito.length;
+}
