@@ -135,7 +135,7 @@ const productos = [
         imagen: "images/Surtido-bagley.jpeg"
     },
     {
-        nombre: "Virulana",
+        nombre: "esponjas de acero",
         precio: 1000,
         imagen: "images/Virulana.webp"
     },
