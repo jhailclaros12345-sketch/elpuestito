@@ -248,7 +248,7 @@ function mostrarProductos(lista) {
                 <a class="whatsapp" href="https://wa.me/5491126162963?text=Hola,%20quiero%20comprar%20${encodeURIComponent(producto.nombre)}">  
     📲 Pedir por WhatsApp  
 </a>  <button class="carrito-btn" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">
-                <button class="carrito-btn" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">
+                
 🛒 Agregar al carrito
 </button>
 
