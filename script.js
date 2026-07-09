@@ -267,14 +267,16 @@ buscador.addEventListener('input', (e) => {
     mostrarProductos(productosFiltrados);
 });
 function filtrarCategoria(categoria) {
-  if (categoria === "todos") {
-    mostrarProductos(productos);
-    return;
-  }
+    alert(categoria);
 
-  const productosFiltrados = productos.filter(producto =>
-    producto.categoria === categoria
-  );
+    if (categoria === "todos") {
+        mostrarProductos(productos);
+        return;
+    }
 
-  mostrarProductos(productosFiltrados);
+    const productosFiltrados = productos.filter(producto =>
+        producto.categoria === categoria
+    );
+
+    mostrarProductos(productosFiltrados);
 }
