@@ -285,13 +285,7 @@ function filtrarCategoria(categoria) {
 }
 let carrito = [];
 
-function agregarAlCarrito(nombre, precio) {
-    carrito.push({ nombre, precio });
 
-    alert(
-        `${nombre} agregado al carrito.\n\nProductos: ${carrito.length}`
-    );
-}
 function verCarrito() {
     if (carrito.length === 0) {
         alert("Tu carrito está vacío.");
