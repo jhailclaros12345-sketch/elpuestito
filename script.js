@@ -267,7 +267,7 @@ buscador.addEventListener('input', (e) => {
     mostrarProductos(productosFiltrados);
 });
 function filtrarCategoria(categoria) {
-    alert(categoria);
+    
 
     if (categoria === "todos") {
         mostrarProductos(productos);
