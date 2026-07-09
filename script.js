@@ -314,3 +314,10 @@ function verCarrito() {
 
     alert(mensaje);
 }
+function abrirCarrito() {
+    document.getElementById("panel-carrito").classList.add("abierto");
+}
+
+function cerrarCarrito() {
+    document.getElementById("panel-carrito").classList.remove("abierto");
+}
