@@ -57,7 +57,7 @@ const productos = [
     {
         nombre: "Pitusas Black",
         precio: 1000,
-        imagen: "images/Pitusas-black.webp"
+        imagen: "images/ Pitusas-black.webp"
     },
     {
         nombre: "Alcohol Duplex",
