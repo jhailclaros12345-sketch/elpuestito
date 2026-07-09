@@ -172,3 +172,16 @@ h2{
     font-size: 18px;
     margin: 8px 0;
 }
+.carrito-icono{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: white;
+    color: #1976d2;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0,0,0,.2);
+    z-index: 1000;
+}
