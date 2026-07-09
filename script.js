@@ -387,3 +387,38 @@ function actualizarCarrito() {
 
     contenido.innerHTML = html;
 }
+function verCarrito() {
+    document.getElementById("panel-carrito").classList.add("abierto");
+}
+
+function cerrarCarrito() {
+    document.getElementById("panel-carrito").classList.remove("abierto");
+}
+
+function vaciarCarrito() {
+    carrito = [];
+    actualizarCarrito();
+}
+
+function finalizarCompra() {
+
+    if (carrito.length === 0) {
+        alert("El carrito está vacío.");
+        return;
+    }
+
+    let mensaje = "Hola, quiero realizar el siguiente pedido:%0A%0A";
+    let total = 0;
+
+    carrito.forEach(producto => {
+        mensaje += `• ${producto.nombre} x${producto.cantidad}%0A`;
+        total += producto.precio * producto.cantidad;
+    });
+
+    mensaje += `%0A💰 Total: $${total}`;
+
+    window.open(
+        `https://wa.me/5491126162963?text=${mensaje}`,
+        "_blank"
+    );
+}
