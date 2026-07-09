@@ -215,3 +215,18 @@ h2{
     font-size:22px;
     cursor:pointer;
 }
+.carrito-btn{
+    width: 100%;
+    padding: 14px;
+    background: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+.carrito-btn:hover{
+    background: #f57c00;
+}
