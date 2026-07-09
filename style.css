@@ -64,13 +64,6 @@ header p{
     white-space: nowrap;
 }
 
-.categorias button:hover {
-    background: #0d6efd;
-    color: white;
-    transform: translateY(-2px);
-}
-}
-
 .categorias button{
     background:#ffffff;
     border:none;
