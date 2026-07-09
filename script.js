@@ -286,3 +286,27 @@ function filtrarCategoria(categoria) {
 
     mostrarProductos(productosFiltrados);
 }
+// =====================
+// CARRITO
+// =====================
+
+let carrito = [];
+
+function agregarAlCarrito(nombre, precio) {
+
+    const productoExistente = carrito.find(
+        producto => producto.nombre === nombre
+    );
+
+    if (productoExistente) {
+        productoExistente.cantidad++;
+    } else {
+        carrito.push({
+            nombre,
+            precio,
+            cantidad: 1
+        });
+    }
+
+    actualizarCarrito();
+}
