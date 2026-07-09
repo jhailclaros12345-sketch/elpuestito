@@ -248,13 +248,7 @@ function mostrarProductos(lista) {
                 <button class="carrito-btn" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">
 🛒 Agregar al carrito
 </button>
-let carrito = [];
 
-function agregarAlCarrito(nombre, precio) {
-    carrito.push({ nombre, precio });
-
-    document.getElementById("contador-carrito").textContent = carrito.length;
-}
             </div>
         `;
     });
