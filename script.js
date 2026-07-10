@@ -4,7 +4,7 @@ const productos = [
         precio: 3000,
         imagen: "images/magistral-ultra.jpg",
 categoria:"limpieza",
-stock: false
+stock: true
     },
     {
         nombre: "Magistral Repuesto 450 ml",
@@ -18,7 +18,7 @@ stock: true
         precio: 3000,
         imagen: "images/colgate-triple-accion.jpg",
 categoria:"higiene",
-stock: true
+stock: falce
     },
     {
         nombre: "Colgate Original 180g",
