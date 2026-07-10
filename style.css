@@ -264,3 +264,21 @@ h2{
     font-weight:bold;
     font-size:18px;
 }
+.panel-carrito{
+    display: flex;
+    flex-direction: column;
+}
+
+#contenido-carrito{
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+#footer-carrito{
+    background: white;
+    padding-top: 10px;
+    border-top: 2px solid #ddd;
+    position: sticky;
+    bottom: 0;
+}
