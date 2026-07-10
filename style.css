@@ -293,15 +293,17 @@ h2{
     font-weight: bold;
     color: #222;
 }
+
 .promo{
-    position:absolute;
-    top:10px;
-    left:10px;
-    background:#ff5722;
-    color:white;
-    padding:6px 12px;
-    border-radius:20px;
-    font-size:14px;
-    font-weight:bold;
-    box-shadow:0 3px 8px rgba(0,0,0,.2);
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #ff3b30;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    z-index: 10;
 }
