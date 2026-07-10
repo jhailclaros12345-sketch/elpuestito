@@ -383,12 +383,13 @@ footer.innerHTML = `
         📲 Finalizar compra
     </button>
 
-    <button class="carrito-btn" onclick="vaciarCarrito()">
-        🗑 Vaciar carrito
-    </button>
 <button class="carrito-btn" onclick="cerrarCarrito()">
     🛍️ Seguir comprando
 </button>
+
+    <button class="carrito-btn" onclick="vaciarCarrito()">
+        🗑 Vaciar carrito
+    </button>
 `;
 
     contenido.innerHTML = html;
