@@ -371,19 +371,21 @@ function actualizarCarrito() {
         `;
     });
 
-    html += `
-        <hr>
+  const footer = document.getElementById("footer-carrito");
 
-        <h3>Total: $${total}</h3>
+footer.innerHTML = `
+    <hr>
 
-        <button class="carrito-btn" onclick="finalizarCompra()">
-            📲 Finalizar compra
-        </button>
+    <h3>Total: $${total}</h3>
 
-        <button class="carrito-btn" onclick="vaciarCarrito()">
-            🗑 Vaciar carrito
-        </button>
-    `;
+    <button class="carrito-btn" onclick="finalizarCompra()">
+        📲 Finalizar compra
+    </button>
+
+    <button class="carrito-btn" onclick="vaciarCarrito()">
+        🗑 Vaciar carrito
+    </button>
+`;
 
     contenido.innerHTML = html;
 }
