@@ -4,7 +4,7 @@ const productos = [
         precio: 3000,
         imagen: "images/magistral-ultra.jpg",
 categoria:"limpieza",
-stock: true
+stock: false
     },
     {
         nombre: "Magistral Repuesto 450 ml",
