@@ -290,7 +290,7 @@ function filtrarCategoria(categoria) {
 // CARRITO
 // =====================
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 function agregarAlCarrito(nombre, precio) {
 
