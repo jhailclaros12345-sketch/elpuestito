@@ -378,9 +378,7 @@ footer.innerHTML = `
     <hr>
 
     <h3>Total: $${total}</h3>
-<button class="carrito-btn" onclick="cerrarCarrito()">
-    🛍️ Seguir comprando
-</button>
+
     <button class="carrito-btn" onclick="finalizarCompra()">
         📲 Finalizar compra
     </button>
@@ -388,6 +386,9 @@ footer.innerHTML = `
     <button class="carrito-btn" onclick="vaciarCarrito()">
         🗑 Vaciar carrito
     </button>
+<button class="carrito-btn" onclick="cerrarCarrito()">
+    🛍️ Seguir comprando
+</button>
 `;
 
     contenido.innerHTML = html;
