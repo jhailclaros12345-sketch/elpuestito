@@ -376,11 +376,11 @@ function actualizarCarrito() {
 footer.innerHTML = `
 
     <hr>
+
+    <h3>Total: $${total}</h3>
 <button class="carrito-btn" onclick="cerrarCarrito()">
     🛍️ Seguir comprando
 </button>
-    <h3>Total: $${total}</h3>
-
     <button class="carrito-btn" onclick="finalizarCompra()">
         📲 Finalizar compra
     </button>
