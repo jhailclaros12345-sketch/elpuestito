@@ -243,7 +243,10 @@ function mostrarProductos(lista) {
     lista.forEach(producto => {
         contenedor.innerHTML += `
             <div class="card">
-                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <div style="position:relative;">
+    ${producto.promo ? `<span class="promo">${producto.promo}</span>` : ""}
+    <img src="${producto.imagen}" alt="${producto.nombre}">
+</div>
                 <h2>${producto.nombre}</h2>
                 <p class="precio">$${producto.precio}</p>
                 ${producto.stock ? `
