@@ -374,10 +374,10 @@ function actualizarCarrito() {
   const footer = document.getElementById("footer-carrito");
 
 footer.innerHTML = `
-    <h3>Total: $${total}</h3>
+   <div class="total-carrito">
+    Total: $${total}
+</div>
     <hr>
-
-
 
     <button class="carrito-btn" onclick="finalizarCompra()">
         📲 Finalizar compra
