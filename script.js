@@ -366,9 +366,6 @@ function actualizarCarrito() {
 
                     <button onclick="eliminarProducto(${indice})">🗑</button>
 </div>
-<button class="carrito-btn" onclick="cerrarCarrito()">
-    🛍️ Seguir comprando
-</button>
                 </div>
             
         `;
@@ -377,6 +374,9 @@ function actualizarCarrito() {
   const footer = document.getElementById("footer-carrito");
 
 footer.innerHTML = `
+<button class="carrito-btn" onclick="cerrarCarrito()">
+    🛍️ Seguir comprando
+</button>
     <hr>
 
     <h3>Total: $${total}</h3>
