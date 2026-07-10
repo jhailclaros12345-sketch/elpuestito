@@ -57,7 +57,7 @@ stock: true
     },
     {
         nombre: "Fideos Molto Largos",
-        precio: 2000,
+        precio: 850,
         imagen: "images/fideos-molto-largos.jpg",
 categoria: "almacen",
 stock: true
