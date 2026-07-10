@@ -282,3 +282,14 @@ h2{
     position: sticky;
     bottom: 0;
 }
+.total-carrito {
+    background: #f5f5f5;
+    border: 2px solid #2196f3;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+}
