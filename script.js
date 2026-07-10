@@ -365,12 +365,12 @@ function actualizarCarrito() {
                     <button onclick="cambiarCantidad(${indice}, 1)">➕</button>
 
                     <button onclick="eliminarProducto(${indice})">🗑</button>
-
-                </div>
-            </div>
+</div>
 <button class="carrito-btn" onclick="cerrarCarrito()">
     🛍️ Seguir comprando
 </button>
+                </div>
+            
         `;
     });
 
