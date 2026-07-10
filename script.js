@@ -18,7 +18,7 @@ stock: true
         precio: 3000,
         imagen: "images/colgate-triple-accion.jpg",
 categoria:"higiene",
-stock: falce
+stock: false
     },
     {
         nombre: "Colgate Original 180g",
