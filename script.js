@@ -57,7 +57,8 @@ stock: true
     },
     {
         nombre: "Fideos Molto Largos",
-        precio: 850,
+        precio:💲 $850 c/u,
+      🔥 Promo: 3 × $2500,
         imagen: "images/fideos-molto-largos.jpg",
 categoria: "almacen",
 stock: true
