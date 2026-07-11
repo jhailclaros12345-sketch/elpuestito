@@ -9,6 +9,7 @@ stock: true
     {
         nombre: "Magistral Repuesto 450 ml",
         precio: 2500,
+        destacado: true,
         imagen: "images/magistral-repuesto-450ml.jpg",
 categoria: "limpieza",
 stock: true
@@ -16,6 +17,7 @@ stock: true
     {
         nombre: "Colgate Triple Acción",
         precio: 3000,
+        destacado: true,
         imagen: "images/colgate-triple-accion.jpg",
 categoria:"higiene",
 stock: true
@@ -58,6 +60,7 @@ stock: true
     {
         nombre: "Fideos Molto Largos",
         precio: 850,
+        destacado: true,
         promo: "3×$2500",
         imagen: "images/fideos-molto-largos.jpg",
 categoria: "almacen",
