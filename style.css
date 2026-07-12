@@ -320,3 +320,36 @@ h2{
     box-shadow:0 3px 8px rgba(0,0,0,.2);
     z-index:10;
 }
+.hero{
+    text-align:center;
+    padding:40px 20px;
+    background:linear-gradient(135deg,#1976d2,#42a5f5);
+    color:white;
+    border-radius:20px;
+    margin:20px;
+}
+
+.hero h1{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+.hero-info{
+    margin-bottom:20px;
+    font-size:16px;
+}
+
+.hero-btn{
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:bold;
+}
