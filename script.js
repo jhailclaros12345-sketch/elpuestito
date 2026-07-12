@@ -245,7 +245,7 @@ function mostrarProductos(lista) {
 
     lista.forEach(producto => {
         contenedor.innerHTML += `
-            <div class="card">
+            <div class="card" onclick="abrirModal(producto)">
                 <div style="position:relative;">
     ${producto.promo ? `<span class="promo">${producto.promo}</span>` : ""}
 ${producto.destacado ? `<span class="destacado">⭐ MÁS VENDIDO</span>` : ""}
