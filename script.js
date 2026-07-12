@@ -248,6 +248,7 @@ function mostrarProductos(lista) {
             <div class="card">
                 <div style="position:relative;">
     ${producto.promo ? `<span class="promo">${producto.promo}</span>` : ""}
+${producto.destacado ? `<span class="destacado">⭐ MÁS VENDIDO</span>` : ""}
     <img src="${producto.imagen}" alt="${producto.nombre}">
 </div>
                 <h2>${producto.nombre}</h2>
