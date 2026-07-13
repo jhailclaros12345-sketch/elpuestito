@@ -95,6 +95,8 @@ header p{
 }
 
 .card{
+transition: 0.25s;
+cursor: pointer;
     background:white;
     border-radius:15px;
     overflow:hidden;
