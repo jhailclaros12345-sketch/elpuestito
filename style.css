@@ -395,3 +395,11 @@ h2{
     font-size:30px;
     cursor:pointer;
 }
+.topbar{
+    background:#198754;
+    color:white;
+    text-align:center;
+    padding:10px;
+    font-size:14px;
+    font-weight:bold;
+}
