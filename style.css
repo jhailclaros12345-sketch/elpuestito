@@ -494,3 +494,15 @@ footer p{
     box-shadow:0 4px 10px rgba(0,0,0,0.3);
     z-index:1000;
 }
+#admin-btn{
+    position:fixed;
+    bottom:160px;
+    right:20px;
+    background:#343a40;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+    z-index:1000;
+}
