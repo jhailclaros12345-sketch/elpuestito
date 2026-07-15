@@ -237,7 +237,8 @@ const buscador = document.getElementById('buscador');
 // Función para dibujar los productos en pantalla
 function mostrarProductos(lista) {
     contenedor.innerHTML = ""; 
-    
+    document.getElementById("contador-productos").innerText =
+    `${lista.length} productos disponibles`;
     if (lista.length === 0) {
         contenedor.innerHTML = `<p style="text-align:center; width:100%; font-size:18px; margin-top:20px; color:#666;">No se encontraron productos.</p>`;
         return;
