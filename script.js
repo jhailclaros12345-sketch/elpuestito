@@ -443,3 +443,18 @@ function finalizarCompra() {
         "_blank"
     );
 }
+function abrirAdmin(){
+    document.getElementById("total-productos").textContent = productos.length;
+
+    document.getElementById("total-promos").textContent =
+        productos.filter(p => p.promo).length;
+
+    document.getElementById("total-agotados").textContent =
+        productos.filter(p => p.stock === false).length;
+
+    document.getElementById("admin-modal").style.display = "block";
+}
+
+function cerrarAdmin(){
+    document.getElementById("admin-modal").style.display = "none";
+}
