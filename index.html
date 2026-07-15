@@ -112,6 +112,17 @@
 <button id="btn-arriba" onclick="window.scrollTo({top:0, behavior:'smooth'})">
     ⬆️
 </button>
+<div id="admin-modal" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar-modal" onclick="cerrarAdmin()">&times;</span>
+
+        <h2>⚙️ Panel de Administración</h2>
+
+        <p>📦 Productos: <span id="total-productos">0</span></p>
+        <p>🔥 Promociones: <span id="total-promos">0</span></p>
+        <p>🔴 Agotados: <span id="total-agotados">0</span></p>
+    </div>
+</div>
 <script src="script.js"></script>
 
 </body>
