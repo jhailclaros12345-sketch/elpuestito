@@ -458,9 +458,6 @@ function abrirAdmin(){
 function cerrarAdmin(){
     document.getElementById("admin-modal").style.display = "none";
 }
-function abrirAdmin(){
-    alert("Funciona el botón ⚙️");
-}
 
 function cerrarAdmin(){
     document.getElementById("admin-modal").style.display = "none";
