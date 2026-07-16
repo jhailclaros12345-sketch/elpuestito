@@ -452,11 +452,7 @@ function abrirAdmin(){
     document.getElementById("total-agotados").textContent =
         productos.filter(p => p.stock === false).length;
 
-    document.getElementById("admin-modal").style.display = "block";
-}
-
-function cerrarAdmin(){
-    document.getElementById("admin-modal").style.display = "none";
+    document.getElementById("admin-modal").style.display = "block"
 }
 
 function cerrarAdmin(){
