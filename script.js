@@ -167,7 +167,7 @@ stock: true
     },
     {
         nombre: "Plusbelle Frescura",
-        precio: 1000,
+        precio: 3500,
         imagen: "images/Plusbelle-frescura.jpg",
 categoria:"higiene",
 stock: true
