@@ -442,6 +442,9 @@ function finalizarCompra() {
         `https://wa.me/5491126162963?text=${mensaje}`,
         "_blank"
     );
+//===================================
+// PANEL DE ADMINISTRACIÓN
+//===================================
 }
 
 function abrirAdmin(){
