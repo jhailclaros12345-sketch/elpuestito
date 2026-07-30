@@ -457,3 +457,23 @@ function abrirAdmin(){
 function cerrarAdmin(){
     document.getElementById("admin-modal").style.display = "none";
 }
+//==================================
+// CENTRO DE NOTIFICACIONES
+//==================================
+
+function mostrarNotificacion(mensaje){
+
+const notificacion = document.getElementById("notificacion");
+
+notificacion.innerText = mensaje;
+
+notificacion.style.display = "block";
+
+
+setTimeout(function(){
+
+notificacion.style.display = "none";
+
+},3000);
+
+}
