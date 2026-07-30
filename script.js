@@ -308,7 +308,7 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 function agregarAlCarrito(nombre, precio) {
 
-mostrarNotificacion("✓ Producto agregado al carrito.");
+mostrarNotificacion("✓ " + nombre + " agregado al carrito.");
 
     const productoExistente = carrito.find(
         producto => producto.nombre === nombre
