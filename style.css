@@ -514,12 +514,12 @@ footer p{
 /*==================================
 CENTRO DE NOTIFICACIONES
 ==================================*/
+
 .notificacion{
 
 position:fixed;
 top:20px;
-left:50%;
-transform:translateX(-50%);
+right:20px;
 background:white;
 padding:15px;
 border-radius:15px;
@@ -527,6 +527,5 @@ box-shadow:0 0 15px rgba(0,0,0,0.2);
 font-weight:bold;
 z-index:9999;
 display:none;
-opacity:0;
-transition:0.5s;
+
 }
