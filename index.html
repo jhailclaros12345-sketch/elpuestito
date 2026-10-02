@@ -1,133 +1,224 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Puestito</title>  
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1347b8">
+
+  <title>El Puestito | Catálogo</title>
+  <meta name="description" content="Catálogo de El Puestito: productos de limpieza, higiene, almacén y artículos para el hogar. Armá tu pedido y envialo por WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="El Puestito | Catálogo">
+  <meta property="og:description" content="Productos de limpieza, higiene y mucho más. Armá tu pedido y envialo por WhatsApp.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏪%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Datos estructurados básicos (solo el nombre; agregá dirección/teléfono cuando quieras) -->
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Store", "name": "El Puestito" }
+  </script>
 </head>
 
 <body>
-<div id="bienvenida" class="bienvenida">
-    👋 ¡Bienvenido a El Puestito! Gracias por visitarnos.
-</div>
-<div class="carrito-icono" onclick="verCarrito()">
-    🛒 <span id="contador-carrito">0</span>
-</div>
- 
-<div class="topbar">
-    🚚 Pedidos por WhatsApp &nbsp; | &nbsp;
-    💳 Aceptamos transferencias &nbsp; | &nbsp;
-    🛍️ Nos encontrás en la feria
-</div>
+  <a class="saltar" href="#catalogo">Saltar al catálogo</a>
 
-<div id="panel-carrito" class="panel-carrito">
-    <div class="panel-header">
-        <h2>🛒 Mi carrito</h2>
-        <button onclick="cerrarCarrito()">✖</button>
+  <!-- ===================== ENCABEZADO ===================== -->
+  <header class="encabezado">
+    <div class="contenedor encabezado-fila">
+      <a class="marca" href="#inicio" aria-label="El Puestito, ir al inicio">
+        <span class="marca-logo" aria-hidden="true">EP</span>
+        <span class="marca-texto">
+          <strong>El Puestito</strong>
+          <small>Todo para tu hogar</small> <!-- EDITAR: tu slogan -->
+        </span>
+      </a>
+
+      <button type="button" class="btn btn-primario btn-carrito" id="btn-carrito" aria-label="Abrir carrito">
+        <span aria-hidden="true">🛒</span>
+        <span class="btn-carrito-texto">Carrito</span>
+        <span class="contador" id="contador-carrito" hidden>0</span>
+      </button>
     </div>
+  </header>
 
-    <div id="contenido-carrito">
-    <p>Tu carrito está vacío.</p>
-</div>
-<div id="footer-carrito"></div>
-</div>
+  <main id="inicio">
 
-<header>
-    <h1>🏪 El Puestito</h1>
-    <p>🛒 Mayorista y Minorista · Los mejores precios</p>
-</header>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="contenedor">
+        <h1 id="hero-titulo">Todo lo que necesitás para tu hogar</h1>
+        <p class="hero-texto">Productos de limpieza, higiene y mucho más.</p>
+        <div class="hero-acciones">
+          <a class="btn btn-claro" href="#catalogo">Ver productos</a>
+          <a class="btn btn-borde" href="#" data-whatsapp>Escribinos por WhatsApp</a>
+        </div>
+      </div>
+    </section>
 
-<section class="buscador">
-    <input
-        type="text"
-        id="buscador"
-        placeholder="🔍 Buscar productos...">
+    <!-- EDITAR: estos 4 beneficios son textos de ejemplo. Cambialos o borralos a tu gusto. -->
+    <section class="beneficios contenedor" aria-label="Beneficios">
+      <div class="beneficio">
+        <span class="beneficio-icono" aria-hidden="true">💬</span>
+        <strong>Pedidos por WhatsApp</strong>
+        <span>Armá tu pedido y envialo en un toque.</span>
+      </div>
+      <div class="beneficio">
+        <span class="beneficio-icono" aria-hidden="true">🔥</span>
+        <strong>Promociones</strong>
+        <span>Mirá las ofertas vigentes.</span>
+      </div>
+      <div class="beneficio">
+        <span class="beneficio-icono" aria-hidden="true">🚚</span>
+        <strong>Envíos</strong>
+        <span>Consultanos por envíos.</span>
+      </div>
+      <div class="beneficio">
+        <span class="beneficio-icono" aria-hidden="true">🙋</span>
+        <strong>Atención personalizada</strong>
+        <span>Te respondemos por WhatsApp.</span>
+      </div>
+    </section>
 
-<div class="categorias">
-  <button onclick="filtrarCategoria('todos')">Todos</button>
-  <button onclick="filtrarCategoria('limpieza')">🧴 Limpieza</button>
-  <button onclick="filtrarCategoria('higiene')">🪥 Higiene</button>
-  <button onclick="filtrarCategoria('papeles')">🧻 Papeles</button>
-  <button onclick="filtrarCategoria('almacen')">🍪 Almacén</button>
-  <button onclick="filtrarCategoria('bebidas')">🥤 Bebidas</button>
-</div>
-</section>
-<section class="hero">
-    <h1>🛒 El Puestito</h1>
-    <p>Todo para tu hogar al mejor precio</p>
-<div class="hero-info">
-    🧻 Papeles • 🧴 Limpieza • 🪥 Higiene • 🍜 Almacén
-</div> 
+    <!-- ===================== DESTACADOS (se llena solo desde script.js) ===================== -->
+    <section class="seccion" id="destacados" aria-labelledby="destacados-titulo" hidden>
+      <div class="contenedor">
+        <h2 id="destacados-titulo">⭐ Productos destacados</h2>
+        <div class="carril" id="contenedor-destacados"></div>
+      </div>
+    </section>
 
-    <a href="#productos" class="hero-btn">Ver productos</a>
-</section>
+    <!-- ===================== PROMOCIONES (se llena solo desde script.js) ===================== -->
+    <section class="seccion seccion-promo" id="promociones" aria-labelledby="promociones-titulo" hidden>
+      <div class="contenedor">
+        <h2 id="promociones-titulo">🔥 Promociones</h2>
+        <div class="carril" id="contenedor-promociones"></div>
+      </div>
+    </section>
 
-<section id="productos">
-     <section class="ofertas">
-    <h2>🔥 Ofertas de la semana</h2>
+    <!-- ===================== CATÁLOGO ===================== -->
+    <section class="seccion" id="catalogo" aria-labelledby="catalogo-titulo">
+      <div class="contenedor">
+        <h2 id="catalogo-titulo">Catálogo</h2>
 
-    <div class="oferta">
-        <p>🧦 Balerinas: 3 x $1000</p>
+        <div class="herramientas">
+          <div class="buscador">
+            <label class="solo-lector" for="buscador">Buscar productos por nombre</label>
+            <input id="buscador" type="search" placeholder="🔎 ¿Qué estás buscando?" autocomplete="off" enterkeyhint="search">
+          </div>
+          <nav class="categorias" id="categorias" aria-label="Categorías"></nav>
+        </div>
+
+        <p class="resultados" id="contador-productos" aria-live="polite"></p>
+        <div class="grilla" id="contenedor-productos">
+          <noscript><p class="vacio">Para ver el catálogo necesitás activar JavaScript.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="pie">
+    <div class="contenedor pie-grilla">
+      <div>
+        <strong class="pie-marca">El Puestito</strong>
+        <p>Todo para tu hogar</p>
+        <p>📍 Nos encontrás en la feria</p>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <p><a href="#" data-whatsapp>Escribinos por WhatsApp</a></p>
+        <p>Teléfono / email: <span class="pendiente">[AGREGAR]</span></p>
+      </div>
+      <div>
+        <h3>Redes sociales</h3>
+        <p>Instagram: <span class="pendiente">[AGREGAR ENLACE]</span></p>
+        <p>Facebook: <span class="pendiente">[AGREGAR ENLACE]</span></p>
+      </div>
+      <div>
+        <h3>Horarios</h3>
+        <p><span class="pendiente">[AGREGAR HORARIOS]</span></p>
+      </div>
     </div>
-
-    <div class="oferta">
-        <p>🧽 Trapos de piso: 2 x $1500</p>
+    <div class="contenedor pie-base">
+      <small>© <span id="anio">2026</span> El Puestito. Todos los derechos reservados.</small>
+      <button type="button" class="btn-admin" id="btn-admin" aria-label="Abrir panel de administración" title="Administración">⚙️</button>
     </div>
+  </footer>
 
-    <div class="oferta">
-        <p>🍝 Fideos Molto: 3 x $2500</p>
-    </div>
-</section>
-    <p id="contador-productos"></p>
-    <h2>Nuestros productos</h2>
-    <div id="contenedor-productos" class="productos">
-        <!-- Los productos aparecerán automáticamente -->
-    </div>
-</section>
-
-<div id="modal-producto" class="modal">
-  <div class="modal-contenido">
-    <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
-
-    <img id="modal-imagen" src="" alt="Producto">
-
-    <h2 id="modal-nombre"></h2>
-
-    <p id="modal-precio"></p>
-
-    <div id="modal-extra"></div>
+  <!-- ===================== BARRA DE CARRITO (solo celular) ===================== -->
+  <div class="barra-carrito" id="barra-carrito" hidden>
+    <button type="button" id="barra-btn">
+      <span class="barra-cantidad" id="barra-cantidad">0</span>
+      <strong>Ver carrito</strong>
+      <span id="barra-total">$0</span>
+    </button>
   </div>
-</div>      
-<footer>
-    <p>© 2026 El Puestito - Todos los derechos reservados</p>
-    <p>📍 Nos encontrás en la feria</p>
-    <p>🕒 Última actualización: Julio 2026</p>
-</footer>
-</a>
 
-<button id="btn-admin" onclick="abrirAdmin()">
-    ⚙️
-</button>
-<!--==================================
-CENTRO DE NOTIFICACIONES
-===================================-->
-
-<div id="notificacion" class="notificacion">
-    Mensaje
-</div>
-<div id="admin-modal" class="modal">
-    <div class="modal-contenido">
-        <span class="cerrar-modal" onclick="cerrarAdmin()">&times;</span>
-
-      <h2>PANEL DE PRUEBA</h2>
-
-<p>PRODUCTOS: <span id="total-productos">0</span></p>
-<p>PROMOS: <span id="total-promos">0</span></p>
-<p>AGOTADOS: <span id="total-agotados">0</span></p>
+  <!-- ===================== CARRITO ===================== -->
+  <div class="fondo" id="fondo"></div>
+  <aside class="panel-carrito" id="panel-carrito" data-capa aria-hidden="true" aria-labelledby="carrito-titulo">
+    <div class="panel-cab">
+      <h2 id="carrito-titulo">🛒 Carrito</h2>
+      <button type="button" class="cerrar" data-accion="cerrar" data-foco aria-label="Cerrar carrito">✕</button>
     </div>
-</div>
+    <div class="panel-cuerpo" id="contenido-carrito"></div>
+    <div class="panel-pie" id="footer-carrito"></div>
+  </aside>
 
-<script src="script.js"></script>
+  <!-- ===================== MODAL DE PRODUCTO ===================== -->
+  <div class="modal" id="modal-producto" data-capa role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-hidden="true">
+    <div class="modal-caja">
+      <button type="button" class="cerrar" data-accion="cerrar" data-foco aria-label="Cerrar detalle del producto">✕</button>
+      <div class="modal-scroll" id="modal-cuerpo"></div>
+    </div>
+  </div>
+
+  <!-- ===================== PANEL DE ADMINISTRACIÓN ===================== -->
+  <div class="modal" id="admin-modal" data-capa role="dialog" aria-modal="true" aria-labelledby="admin-titulo" aria-hidden="true">
+    <div class="modal-caja modal-admin">
+      <button type="button" class="cerrar" data-accion="cerrar" data-foco aria-label="Cerrar panel de administración">✕</button>
+      <div class="modal-scroll">
+        <h2 id="admin-titulo">Panel de administración</h2>
+        <p class="nota">Estos números se calculan solos a partir de la lista de productos de <code>script.js</code>.</p>
+
+        <div class="estadisticas">
+          <div class="estadistica"><strong id="total-productos">0</strong><span>Productos</span></div>
+          <div class="estadistica"><strong id="total-destacados">0</strong><span>Destacados</span></div>
+          <div class="estadistica"><strong id="total-promos">0</strong><span>Promociones</span></div>
+          <div class="estadistica"><strong id="total-agotados">0</strong><span>Agotados</span></div>
+        </div>
+
+        <h3>Calculadora de inventario</h3>
+        <p class="nota">Ejemplo: llevé 50 unidades y vendí 38.</p>
+        <div class="inventario-campos">
+          <label>Llevé
+            <input type="number" id="inv-llevadas" min="0" inputmode="numeric" placeholder="50">
+          </label>
+          <label>Vendí
+            <input type="number" id="inv-vendidas" min="0" inputmode="numeric" placeholder="38">
+          </label>
+        </div>
+        <div class="estadisticas estadisticas-3">
+          <div class="estadistica"><strong id="inv-res-vendidas">–</strong><span>Vendidas</span></div>
+          <div class="estadistica"><strong id="inv-res-restantes">–</strong><span>Restantes</span></div>
+          <div class="estadistica"><strong id="inv-res-porcentaje">–</strong><span>Vendido</span></div>
+        </div>
+        <div class="progreso" aria-hidden="true"><div class="progreso-barra" id="inv-barra"></div></div>
+        <p class="nota" id="inv-mensaje" role="status"></p>
+
+        <p class="nota">Para agregar o editar productos, modificá la lista <code>productos</code> en <code>script.js</code>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== NOTIFICACIONES ===================== -->
+  <div class="notificaciones" id="notificaciones" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
