@@ -1,4 +1,4 @@
-"use strict";
+,"use strict";
 
 /* =====================================================
    EL PUESTITO · script.js
@@ -76,7 +76,7 @@ const productos = [
   { nombre: "Colgate Original 180g", precio: 3000, imagen: "images/colgate-original-180g.jpg", categoria: "higiene", stock: true },
   { nombre: "Dove Original", precio: 1500, imagen: "images/dove-original.jpg", categoria: "higiene", stock: true },
   { nombre: "Axe Desodorante Apolo", precio: 4000, imagen: "images/axe-desodorante-apolo.jpg", categoria: "higiene", stock: true },
-  { nombre: "Axe Desodorante Black", precio: 4000, imagen: "images/axe-desodorante-black.jpg", categoria: "higiene", stock: true },
+  { nombre: "Axe Desodorante Black", precio: 4000, imagen: "images/axe-desodorante-black.jpg", categoria: "higiene", stock: false },
   { nombre: "Babysec Toallitas 50", precio: 2000, imagen: "images/babysec-toallitas-50.jpg", categoria: "papeles", stock: true },
   { nombre: "Fideos Molto Largos", precio: 850, destacado: true, promo: "3×$2500", imagen: "images/fideos-molto-largos.jpg", categoria: "almacen", stock: true },
   { nombre: "Morenita Saquitos", precio: 4000, imagen: "images/Caffe-morenita-saquitos.jpg", categoria: "almacen", stock: true },
