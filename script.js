@@ -805,7 +805,7 @@ function configurarEnlacesWhatsApp() {
   });
 }
 
-
+ 
 /* =====================================================
    12. ADMINISTRACIÓN
    ===================================================== */
@@ -867,4 +867,136 @@ function actualizarCalculadoraInventario() {
   }
 }
 
-function abrir
+function abrirAdmin() {
+  const panel = obtenerEl("admin-modal");
+  if (!panel) { console.warn("abrirAdmin: no existe #admin-modal en el HTML"); return; }
+  mostrarEstadisticas();
+  actualizarCalculadoraInventario();
+  abrirCapa(panel);
+}
+
+function cerrarAdmin() {
+  cerrarCapa(obtenerEl("admin-modal"));
+}
+
+
+/* =====================================================
+   13. EVENTOS E INICIO
+   ===================================================== */
+
+// Clicks dentro de las tarjetas (catálogo, destacados y promociones).
+function manejarClickProductos(e) {
+  const accion = e.target.closest("[data-accion]");
+  if (accion && accion.dataset.accion === "agregar") {
+    e.stopPropagation();                         // el botón NO debe abrir también el modal
+    const tarjeta = accion.closest(".tarjeta");
+    if (tarjeta) agregarAlCarrito(tarjeta.dataset.id, 1);
+    return;
+  }
+  if (accion && accion.dataset.accion === "limpiar") { limpiarFiltros(); return; }
+  const tarjeta = e.target.closest(".tarjeta");
+  if (tarjeta) abrirModal(tarjeta.dataset.id);
+}
+
+function manejarClickModal(e) {
+  if (e.target === e.currentTarget) { cerrarModal(); return; }     // clic fuera de la caja
+  const el = e.target.closest("[data-accion]");
+  if (!el) return;
+  switch (el.dataset.accion) {
+    case "cerrar": cerrarModal(); break;
+    case "menos": cambiarCantidadModal(-1); break;
+    case "mas": cambiarCantidadModal(1); break;
+    case "agregar": if (agregarAlCarrito(productoModalId, cantidadModal)) cerrarModal(); break;
+    case "whatsapp": pedirProductoPorWhatsApp(productoModalId); break;
+  }
+}
+
+function manejarClickCarrito(e) {
+  const el = e.target.closest("[data-accion]");
+  if (!el) return;
+  const item = el.closest("[data-id]");
+  const id = item ? item.dataset.id : null;
+  switch (el.dataset.accion) {
+    case "cerrar":
+    case "seguir": cerrarCarrito(); break;
+    case "mas": if (id) cambiarCantidad(id, 1); break;
+    case "menos": if (id) cambiarCantidad(id, -1); break;
+    case "eliminar": if (id) eliminarProducto(id); break;
+    case "finalizar": finalizarCompra(); break;
+    case "vaciar": vaciarCarrito(); break;
+  }
+}
+
+// Conecta un elemento por id sin romperse si el elemento no existe.
+function escuchar(id, evento, funcion) {
+  const el = obtenerEl(id);
+  if (el) el.addEventListener(evento, funcion);
+  else console.warn("No se encontró #" + id + " en el HTML");
+}
+
+function iniciarEventos() {
+  escuchar("buscador", "input", function (e) { buscarProductos(e.target.value); });
+  escuchar("categorias", "click", function (e) {
+    const boton = e.target.closest("[data-categoria]");
+    if (boton) filtrarCategoria(boton.dataset.categoria);
+  });
+
+  ["contenedor-productos", "contenedor-destacados", "contenedor-promociones"].forEach(function (id) {
+    escuchar(id, "click", manejarClickProductos);
+  });
+
+  escuchar("btn-carrito", "click", verCarrito);
+  escuchar("barra-btn", "click", verCarrito);
+  escuchar("fondo", "click", cerrarCarrito);
+  escuchar("panel-carrito", "click", manejarClickCarrito);
+  escuchar("modal-producto", "click", manejarClickModal);
+
+  escuchar("btn-admin", "click", abrirAdmin);
+  escuchar("admin-modal", "click", function (e) {
+    if (e.target === e.currentTarget || e.target.closest("[data-accion='cerrar']")) cerrarAdmin();
+  });
+  escuchar("inv-llevadas", "input", actualizarCalculadoraInventario);
+  escuchar("inv-vendidas", "input", actualizarCalculadoraInventario);
+
+  // ESC cierra lo que esté abierto
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") cerrarCapaSuperior();
+  });
+
+  // Enlaces de WhatsApp: si falta el número, avisa en vez de abrir un enlace roto
+  document.addEventListener("click", function (e) {
+    const enlace = e.target.closest("[data-whatsapp]");
+    if (enlace && !numeroWhatsAppValido()) {
+      e.preventDefault();
+      mostrarNotificacion("Falta configurar el número de WhatsApp en script.js");
+    }
+  });
+}
+
+function iniciar() {
+  try {
+    limpiarProductos();
+    generarIds();
+    categoriasActivas = listaCategorias();
+    carrito = cargarCarrito();
+
+    mostrarCategorias();
+    mostrarDestacados();
+    mostrarPromociones();
+    mostrarProductos(undefined, true);
+    configurarEnlacesWhatsApp();
+    iniciarEventos();
+    actualizarCarrito();
+    asignarTexto("anio", new Date().getFullYear());
+  } catch (error) {
+    console.error("Error al iniciar el catálogo:", error);
+    const contenedor = obtenerEl("contenedor-productos");
+    if (contenedor) {
+      contenedor.innerHTML = '<div class="vacio"><strong>Ocurrió un problema al cargar el catálogo</strong>' +
+        "<p>Probá recargar la página.</p></div>";
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", iniciar);
+
