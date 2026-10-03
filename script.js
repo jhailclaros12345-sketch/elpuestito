@@ -59,7 +59,7 @@ document.addEventListener("error", function (e) {
      precio: 1000,
      imagen: "images/archivo.webp",
      categoria: "limpieza",
-     stock: false,            // true = hay | false = agotado | número (ej. 12) = unidades
+     stock: true,            // true = hay | false = agotado | número (ej. 12) = unidades
      destacado: false,       // true = aparece en "Productos destacados"
      promo: false,           // true = "Oferta" | "3×$2500" = texto propio de la etiqueta
      descripcion: "",        // texto que se ve en el detalle
