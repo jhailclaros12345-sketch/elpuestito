@@ -386,8 +386,6 @@ function limpiarFiltros() {
   filtrarCategoria("todos");
 }
 
-
-
 /* =====================================================
    6. CATEGORÍAS
    ===================================================== */
@@ -806,6 +804,7 @@ function configurarEnlacesWhatsApp() {
     a.rel = "noopener";
   });
 }
+
 /* =====================================================
    12. ADMINISTRACIÓN
    ===================================================== */
@@ -999,3 +998,4 @@ function iniciar() {
 }
 
 document.addEventListener("DOMContentLoaded", iniciar);
+
