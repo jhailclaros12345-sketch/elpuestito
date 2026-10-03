@@ -70,7 +70,7 @@ document.addEventListener("error", function (e) {
    Los campos que no uses podés dejarlos afuera. El "id" se genera solo a partir del nombre.
    ===================================================== */
 const productos = [
-  { nombre: "Magistral Ultra", precio: 3000, imagen: "images/magistral-ultra.jpg", categoria: "limpieza", stock: true },
+  { nombre: "Magistral Ultra", precio: 3000, imagen: "images/magistral-ultra.jpg", categoria: "limpieza", stock: false },
   { nombre: "Magistral Repuesto 450 ml", precio: 2500, destacado: true, imagen: "images/magistral-repuesto-450ml.jpg", categoria: "limpieza", stock: true },
   { nombre: "Colgate Triple Acción", precio: 3000, destacado: true, imagen: "images/colgate-triple-accion.jpg", categoria: "higiene", stock: true },
   { nombre: "Colgate Original 180g", precio: 3000, imagen: "images/colgate-original-180g.jpg", categoria: "higiene", stock: true },
