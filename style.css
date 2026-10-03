@@ -136,10 +136,10 @@ code { background: var(--gris-100); padding: 1px 6px; border-radius: 6px; font-s
 
 .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
 .marca-logo {
-  display: grid; place-items: center;
-  width: 42px; height: 42px; border-radius: 13px;
-  background: var(--azul-700); color: var(--blanco);
-  font-weight: 800; font-size: 1rem; letter-spacing: .02em;
+  width: 56px; height: 56px; border-radius: 50%;
+  object-fit: contain; background: var(--blanco);
+}
+  
 }
 .marca-texto { display: flex; flex-direction: column; line-height: 1.15; }
 .marca-texto strong { font-size: 1.1rem; font-weight: 800; }
