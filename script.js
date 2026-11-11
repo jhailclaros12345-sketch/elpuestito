@@ -78,7 +78,7 @@ const productos = [
   { nombre: "Axe Desodorante Apolo", precio: 4000, imagen: "images/axe-desodorante-apolo.jpg", categoria: "higiene", stock: false },
   { nombre: "Axe Desodorante Black", precio: 4000, imagen: "images/axe-desodorante-black.jpg", categoria: "higiene", stock: false },
   { nombre: "Babysec Toallitas 50", precio: 2500, imagen: "images/babysec-toallitas-50.jpg", categoria: "papeles", stock: true },
-  { nombre: "Fideos Molto Largos", precio: 1000, destacado: true, promo: "3×$2500", imagen: "images/fideos-molto-largos.jpg", categoria: "almacen", stock: true },
+  { nombre: "Fideos Molto Largos", precio: 1000, destacado: true, imagen: "images/fideos-molto-largos.jpg", categoria: "almacen", stock: true },
   { nombre: "Morenita Saquitos", precio: 4000, imagen: "images/Caffe-morenita-saquitos.jpg", categoria: "almacen", stock: true },
   { nombre: "Rexona Odorono 60g", precio: 2500,destacado:true,promo:"2×4500" imagen: "images/rexona-odorono-60gr.jpg", categoria: "higiene", stock: true },
   { nombre: "Pitusas Black", precio: 1000, imagen: "images/ Pitusas-black.webp", categoria: "almacen", stock: true },
